@@ -1,0 +1,262 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main Container */
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "navbar navbar"
+        "sidebar content"
+        "footer footer";
+    grid-template-columns: 1fr 2fr; /* تقليل عرض العمود الأيسر */
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
+    gap: 1.5rem; /* زيادة التباعد */
+    padding: 1rem;
+}
+
+
+/* Header Section */
+header {
+    grid-area: header;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #0066cc;
+    color: white;
+  }
+
+  header img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+/* Navbar */
+.navbar {
+    grid-area: navbar;
+    background-color: #ff6347;
+    text-align: center;
+    padding: 1rem;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 2rem;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ffdddd;
+}
+
+/* Sidebar Styling with Box Shadow */
+.sidebar {
+    background-color: #f0f0f0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-section {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f8f8f8;
+}
+
+.sidebar h2 {
+    color: red;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.sidebar p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Main Content */
+.content {
+    grid-area: content;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Box Container for organizing the boxes */
+.box-container {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Individual box styles */
+.box {
+    padding: 1rem;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+    height: auto;
+    min-height: 50px;
+}
+
+.box4 {
+    margin: 0 auto;
+    width: auto;
+}
+
+/* Image Caption */
+.image-caption {
+    color: #666666;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Skill Container */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Individual Skill */
+.skill {
+    display: flex;
+    align-items: center;
+    width: calc(50% - 10px);
+    margin-bottom: 10px;
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 70%;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 10px;
+    height: 10px;
+}
+
+/* Default Green Progress */
+.skill.green .progress {
+    background-color: #4CAF50;
+    height: 100%;
+}
+
+/* Blue Progress */
+.skill.blue .progress {
+    background-color: #2196F3;
+    height: 100%;
+}
+
+/* Skill Name */
+.skill span {
+    width: 30%;
+    font-size: 0.9em;
+    color: #333;
+}
+
+/* Full-Width Video */
+.box iframe {
+    width: 100%;
+    height: 650px;
+    border-radius: 5px;
+    border: 0;
+    font-weight: bold;
+}
+
+/* Right-aligned text */
+p.pp {
+    text-align: right;
+    color: #555;
+    font-size: 0.5em;
+    margin-top: -1px;
+}
+
+/* Footer */
+footer {
+    grid-area: footer;
+    background-color: #ff6347;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+}
+
+/* Google Maps Embed Styling */
+#map {
+    width: 100%;
+    height: 500px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Heading Style */
+h3 {
+    text-align: right;
+    color: #ff6347;
+    font-weight: bold;
+}
+
+
+
+/* Back to Top Button */
+#backToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #a9a2a2; /* Green color for visibility */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0.7;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+ 
+ 
+
+ 
